@@ -1,0 +1,35 @@
+{
+  "name": "@kevinsales/dsh-insurance-product-analyst",
+  "version": "1.0.0",
+  "description": "DSH plugin - Insurance product expert (InsureGuide) for policy clause analysis, cost-effectiveness evaluation, product comparison and coverage planning",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "insurance",
+    "product-analysis",
+    "policy-comparison",
+    "cash-value",
+    "irr"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

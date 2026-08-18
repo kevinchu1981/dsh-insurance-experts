@@ -1,0 +1,35 @@
+{
+  "name": "@kevinsales/dsh-insurance-ops-analyst",
+  "version": "1.0.0",
+  "description": "DSH plugin - Insurance company operations analyst (Ying'an) for solvency, profitability, EV, investment risk and regulatory compliance analysis",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "insurance",
+    "solvency",
+    "ev",
+    "nbv",
+    "analyst"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
