@@ -1,0 +1,50 @@
+{
+  "name": "@kevinsales/dsh-insurance-actuary",
+  "version": "1.0.0",
+  "description": "保险精算实操专家(算衡)·DSH插件｜真正跑计算：寿险/财险定价、费率与现金价值、利润测试(NBV/VNB/IRR)、偿二代二期准备金(BEL+RM)、EV/NBV、监管报备。Insurance actuary (Suanheng) that actually runs calculations.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "llm",
+    "ai-agent",
+    "insurance",
+    "保险",
+    "精算",
+    "定价",
+    "利润测试",
+    "准备金",
+    "偿二代二期",
+    "现金价值",
+    "增额寿",
+    "算衡"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinchu1981/dsh-insurance-experts.git"
+  },
+  "homepage": "https://github.com/kevinchu1981/dsh-insurance-experts#readme",
+  "bugs": {
+    "url": "https://github.com/kevinchu1981/dsh-insurance-experts/issues"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
