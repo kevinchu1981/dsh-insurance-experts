@@ -1,11 +1,14 @@
 # DSH Insurance Experts
 
-DeepSeek Harness (DSH) plugins for insurance analysis — three specialized AI expert tools powered by system prompts originally built for WorkBuddy Expert Center.
+[![dshfind](https://dshfind.com/api/badge/kevinchu1981/dsh-insurance-experts?lang=zh)](https://dshfind.com/zh/plugins/kevinchu1981/dsh-insurance-experts?ref=badge)
+
+DeepSeek Harness (DSH) plugins for insurance analysis — four specialized AI expert tools powered by system prompts originally built for WorkBuddy Expert Center.
 
 ## Plugins
 
 | Plugin | npm Package | Tool Name | Description |
 |--------|------------|-----------|-------------|
+| Actuary (算衡) | `@kevinsales/dsh-insurance-actuary` | `insurance_actuary` | Actuarial modelling: pricing, reserves (BEL+RM), profit testing (NBV/IRR), embedded value, P&C loss triangles |
 | Ops Analyst (Ying'an / 盈安) | `@kevinsales/dsh-insurance-ops-analyst` | `insurance_ops_analyst` | Insurance company operations: solvency, profitability, EV, investment risk, regulatory compliance |
 | Company Analyst | `@kevinsales/dsh-insurance-company-analyst` | `insurance_company_analyst` | Insurance company financial & operating analysis: financials, channels, peer comparison |
 | Product Analyst (InsureGuide / 险析君) | `@kevinsales/dsh-insurance-product-analyst` | `insurance_product_analyst` | Insurance product analysis: clause decoding, cost-effectiveness, product comparison, coverage planning |
@@ -15,6 +18,7 @@ DeepSeek Harness (DSH) plugins for insurance analysis — three specialized AI e
 ### Via npm
 
 ```bash
+dsh plugin --profile web add @kevinsales/dsh-insurance-actuary
 dsh plugin --profile web add @kevinsales/dsh-insurance-ops-analyst
 dsh plugin --profile web add @kevinsales/dsh-insurance-company-analyst
 dsh plugin --profile web add @kevinsales/dsh-insurance-product-analyst
@@ -29,6 +33,7 @@ dsh plugin --profile web add "github:kevinsales/dsh-insurance-experts#main"
 ### Local link (for development)
 
 ```bash
+dsh plugin --profile web add "link:./packages/insurance-actuary"
 dsh plugin --profile web add "link:./packages/insurance-ops-analyst"
 dsh plugin --profile web add "link:./packages/insurance-company-analyst"
 dsh plugin --profile web add "link:./packages/insurance-product-analyst"
@@ -54,6 +59,11 @@ npm run build
 ```
 dsh-insurance-experts/
 ├── packages/
+│   ├── insurance-actuary/
+│   │   ├── package.json
+│   │   ├── cordis.patch.yml
+│   │   ├── tsconfig.json
+│   │   └── src/index.ts
 │   ├── insurance-ops-analyst/
 │   │   ├── package.json
 │   │   ├── cordis.patch.yml
@@ -67,7 +77,7 @@ dsh-insurance-experts/
 │   └── insurance-product-analyst/
 │       ├── package.json
 │       ├── cordis.patch.yml
-│       │   ├── tsconfig.json
+│       ├── tsconfig.json
 │       └── src/index.ts
 ├── package.json
 ├── tsconfig.json
@@ -94,6 +104,10 @@ dsh-insurance-experts/
 
 ### 反馈
 用过觉得好/不好，都欢迎到 SkillHub 点赞或留评，或在仓库提 Issue 🙏
+
+## Directory listings
+
+[![dshfind](https://dshfind.com/api/card/kevinchu1981/dsh-insurance-experts?lang=zh)](https://dshfind.com/zh/plugins/kevinchu1981/dsh-insurance-experts?ref=badge)
 
 ## License
 
